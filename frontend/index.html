@@ -1,11 +1,17 @@
 <html ng-app="satellizerApp">
 <head>
   <title></title>
+  <!-- External Modules -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
   <script src="//cdn.jsdelivr.net/satellizer/0.13.1/satellizer.min.js"></script>
+  <script src="https://cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+
+  <!-- Internal Modules -->
   <script src="./js/app.js"></script>
   <script src="./js/controllers/mainController.js"></script>
   <script src="./js/services/oauthKeys.js"></script>
+  <script src="./js/services/authInterceptor.js"></script>
+  <script src="./js/services/tokenService.js"></script>
 </head>
 <body ng-controller="MainController as main">
   <button ng-click="main.authenticate('facebook')">Sign in with Facebook</button>

@@ -1,16 +1,17 @@
 angular
-  .module('satellizerApp', ['satellizer'])
+  .module('satellizerApp', ['satellizer', 'angular-jwt'])
+  .constant('API_URL', 'http://localhost:3000')
   .config(oauthConfig);
 
-oauthConfig.$inject = ['$authProvider', 'facebookClientId', 'twitterClientId'];
-function oauthConfig($authProvider, facebookClientId, twitterClientId) {
+oauthConfig.$inject = ['API_URL', '$authProvider', 'facebookClientId', 'twitterClientId'];
+function oauthConfig(API_URL, $authProvider, facebookClientId, twitterClientId) {
   $authProvider.facebook({
-    url: 'http://localhost:3000/auth/facebook',
+    url: API_URL + '/auth/facebook',
     clientId: facebookClientId // replace with your facebook client id
   });
 
   $authProvider.twitter({
-    url: 'http://localhost:3000/auth/twitter',
+    url: API_URL + '/auth/twitter',
     clientId: twitterClientId // replace with your twitter client id
   });
 }
