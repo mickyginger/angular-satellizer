@@ -1,0 +1,14 @@
+<html ng-app="satellizerApp">
+<head>
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="//cdn.jsdelivr.net/satellizer/0.13.1/satellizer.min.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/controllers/mainController.js"></script>
+  <script src="./js/services/oauthKeys.js"></script>
+</head>
+<body ng-controller="MainController as main">
+  <button ng-click="main.authenticate('facebook')">Sign in with Facebook</button>
+  <button ng-click="main.authenticate('twitter')">Sign in with Twitter</button>
+</body>
+</html>
