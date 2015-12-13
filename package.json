@@ -1,0 +1,11 @@
+{
+  "name": "satellizer",
+  "version": "1.0.0",
+  "description": "A simple oAuth login for angular with satellizer and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Hayden <mickyginger@gmail.com> (https://github.com/mickyginger)",
+  "license": "ISC"
+}
