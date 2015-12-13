@@ -12,7 +12,7 @@ var config = require('./config');
 
 var User = require('./models/user');
 
-mongoose.connect('mongodb://localhost/satellizer');
+mongoose.connect(config.databaseUrl);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -122,5 +122,5 @@ app.post('/auth/twitter', function(req, res) {
   }
 });
 
-app.listen(3000);
-console.log("Express is listening to localhost:3000");
+app.listen(config.port);
+console.log("Express is listening on port " + config.port);
