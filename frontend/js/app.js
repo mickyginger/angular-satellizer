@@ -1,5 +1,5 @@
 angular
-  .module('satellizerApp', ['satellizer', 'angular-jwt'])
+  .module('satellizerApp', ['satellizer'])
   .constant('API_URL', 'http://localhost:3000')
   .config(oauthConfig);
 
